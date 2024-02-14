@@ -1,0 +1,10 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    position: absolute;
+    top: 0;
+    left: 50;
+}
