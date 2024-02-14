@@ -1,63 +1,21 @@
-let todoList = [];
+var but = document.getElementById("button");
+var input = document.getElementById("input");
+var tasks = document.getElementById("tasks");
 
-function renderTodoList() {
-    const todoListTable = document.getElementById('todoList');
-    todoListTable.innerHTML = '';
+but.addEventListener("click", add);
 
-    todoList.forEach((task, index) => {
-        const row = document.createElement('tr');
-
-        const checkboxCell = document.createElement('td');
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.checked = task.done;
-        checkbox.addEventListener('change', () => {
-            toggleTaskStatus(index);
-        });
-        checkboxCell.appendChild(checkbox);
-
-        const taskCell = document.createElement('td');
-        taskCell.classList.add('task-cell');
-        const taskText = document.createElement('span');
-        taskText.textContent = task.task;
-        if (task.done) {
-            taskText.classList.add('completed-task');
-        }
-        taskText.classList.add('task-text');
-        taskCell.appendChild(taskText);
-
-        const deleteCell = document.createElement('td');
-        const deleteIcon = document.createElement('div');
-        deleteIcon.classList.add('delete-icon');
-        deleteIcon.addEventListener('click', () => {
-            deleteTask(index);
-        });
-        deleteCell.appendChild(deleteIcon);
-
-        row.appendChild(checkboxCell);
-        row.appendChild(taskCell);
-        row.appendChild(deleteCell);
-
-        todoListTable.appendChild(row);
-    });
+function add(){
+    var newtask = input.value;
+        var task = `<li><input class="checkboxes" type="checkbox"><span>${newtask}</span><img src="bin.png" alt="delete"></li>`;
+        tasks.insertAdjacentHTML("beforeend", task);
+        document.getElementById("input").value = "";
 }
 
-function addTask() {
-    const taskInput = document.getElementById('taskInput');
-    const task = taskInput.value.trim();
-    if (task !== '') {
-        todoList.push({ task: task, done: false });
-        renderTodoList();
-        taskInput.value = '';
+tasks.addEventListener("click", imageClicked);
+
+function imageClicked(){
+    var task = event.target;
+    if (task.tagName === "IMG") {
+        tasks.removeChild(task.parentNode);
     }
-}
-
-function toggleTaskStatus(index) {
-    todoList[index].done = !todoList[index].done;
-    renderTodoList();
-}
-
-function deleteTask(index) {
-    todoList.splice(index, 1);
-    renderTodoList();
 }
