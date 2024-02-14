@@ -6,9 +6,9 @@ but.addEventListener("click", add);
 
 function add(){
     var newtask = input.value;
-        var task = `<li><input class="checkboxes" type="checkbox"><span>${newtask}</span><img src="bin.png" alt="delete"></li>`;
-        tasks.insertAdjacentHTML("beforeend", task);
-        document.getElementById("input").value = "";
+    var task = `<li><input class="checkboxes" type="checkbox"><span>${newtask}</span><img src="bin.png" alt="delete"></li>`;
+    tasks.insertAdjacentHTML("beforeend", task);
+    document.getElementById("input").value = "";
 }
 
 tasks.addEventListener("click", imageClicked);
