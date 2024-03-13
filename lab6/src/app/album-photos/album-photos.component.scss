@@ -1,0 +1,22 @@
+.photo {
+  margin: 10px;
+}
+
+.photo-img {
+  width: 200px;
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+.return-button {
+  margin-top: 20px;
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.return-button:hover {
+  background-color: #bd2130;
+}

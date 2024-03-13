@@ -1,0 +1,8 @@
+<div class="album-detail-container" *ngIf="album">
+  <h2 class="album-detail-title">{{ album.title }}</h2>
+  <input class="editable-input" type="text" [(ngModel)]="editedTitle">
+  <button class="save-button" (click)="saveChanges()">Save</button>
+  <button class="return-button" [routerLink]="['/albums']">Return back</button>
+  <button class="photos-button" [routerLink]="['/albums', album.id, 'photos']">View Photos</button>
+</div>
+

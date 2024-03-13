@@ -1,0 +1,51 @@
+.album-detail-container {
+  margin: 20px;
+}
+
+.album-detail-title {
+  font-weight: bold;
+}
+
+.editable-input {
+  width: 300px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.save-button,
+.return-button,
+.photos-button {
+  padding: 5px 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.save-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.save-button:hover {
+  background-color: #0056b3;
+}
+
+.return-button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+}
+
+.return-button:hover {
+  background-color: #bd2130;
+}
+
+.photos-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+}
+
+.photos-button:hover {
+  background-color: #218838;
+}

@@ -1,0 +1,25 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: inline;
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: underline;
+  color: #333;
+  font-weight: bold;
+}
+
+a:hover {
+  color: blue;
+}
+
+router-outlet {
+  display: block;
+  margin-top: 20px; /* Расстояние между верхней частью страницы и содержимым */
+}
