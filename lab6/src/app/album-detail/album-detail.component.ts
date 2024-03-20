@@ -30,8 +30,7 @@ export class AlbumDetailComponent {
 
   saveChanges() {
     this.album.title = this.editedTitle;
-    // Call the service to save changes to the album title
-    // For demonstration purposes, let's assume a method saveAlbumTitle exists in the service
+ 
     this.albumsService.updateAlbumTitle(this.albumId, this.editedTitle).subscribe(() => {
       console.log('Album title updated successfully');
     });
