@@ -4,5 +4,4 @@ export interface Company {
     description: string;
     city: string;
     address: string;
-  }
-  
+}

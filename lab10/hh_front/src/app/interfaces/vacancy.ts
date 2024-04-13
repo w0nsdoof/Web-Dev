@@ -3,6 +3,6 @@ export interface Vacancy {
     name: string;
     description: string;
     salary: number;
-    company: number; 
+    company: number;  // This corresponds to the Company ID
   }
   

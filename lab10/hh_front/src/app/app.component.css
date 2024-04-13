@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .companies {
+    width: 40%;
+  }
+  
+  .vacancies {
+    width: 50%;
+  }
+  

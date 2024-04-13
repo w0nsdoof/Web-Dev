@@ -1,1 +1,20 @@
-<app-companies></app-companies>
+<div class="container">
+  <div class="companies">
+    <h1>List of companies</h1>
+    <ul>
+      <li *ngFor="let company of companies">
+        <h2 (click)="companyClicked(company)"> {{ company.name }} </h2>
+      </li> 
+    </ul>
+  </div>
+  
+  <div class="vacancies" *ngIf="selectedCompany">
+    <h2>Vacancies for {{ selectedCompany.name }}</h2>
+    <ul *ngIf="vacancies.length > 0; else noVacancies">
+      <li *ngFor="let vacancy of vacancies">
+        {{ vacancy.name }} ({{ vacancy.salary | currency }})
+      </li>
+    </ul>
+    <ng-template #noVacancies>No vacancies available for this company.</ng-template>
+  </div>
+</div>
