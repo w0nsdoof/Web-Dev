@@ -1,20 +1,24 @@
-<div class="container">
-  <div class="companies">
-    <h1>List of companies</h1>
-    <ul>
-      <li *ngFor="let company of companies">
-        <h2 (click)="companyClicked(company)"> {{ company.name }} </h2>
-      </li> 
-    </ul>
+<div class="app-container">
+  <div class="company-cointainer">
+    <h1>List of Companies</h1>
+    <div class="company" *ngFor="let company of companies" (click)="companyClicked(company)">
+      <h2>{{ company.name }}</h2>
+      <p>{{ company.description }}</p>
+    </div>
   </div>
-  
-  <div class="vacancies" *ngIf="selectedCompany">
-    <h2>Vacancies for {{ selectedCompany.name }}</h2>
-    <ul *ngIf="vacancies.length > 0; else noVacancies">
-      <li *ngFor="let vacancy of vacancies">
-        {{ vacancy.name }} ({{ vacancy.salary | currency }})
-      </li>
-    </ul>
+
+  <div class="vacancy-list" *ngIf="selectedCompany">
+    <h1>Vacancies for {{ selectedCompany.name }}</h1>
+    <div *ngIf="vacancies.length > 0; else noVacancies">
+      <div class="vacancy" *ngFor="let vacancy of vacancies">
+        <h3>{{ vacancy.name }} - {{ vacancy.salary | currency:'KZT':'symbol':'1.0-0' }}</h3>
+        <p>       {{ vacancy.description }}</p>
+      </div>
+    </div>
     <ng-template #noVacancies>No vacancies available for this company.</ng-template>
   </div>
 </div>
+
+
+
+

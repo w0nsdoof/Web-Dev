@@ -42,4 +42,30 @@ export class AppComponent {
       }
     );
   };
+
+  createCompany() {
+    // Logic for creating a new company
+  }
+
+  editCompany(company: Company) {
+    // Logic for editing an existing company
+  }
+
+  deleteCompany(company: Company) {
+    // Logic for deleting a company
+  }
+
+  // CRUD operations for Vacancy
+  createVacancy() {
+    // Logic for creating a new vacancy
+  }
+
+  editVacancy(vacancy: Vacancy) {
+    // Logic for editing an existing vacancy
+  }
+
+  deleteVacancy(vacancy: Vacancy) {
+    // Logic for deleting a vacancy
+  }
 }
+
